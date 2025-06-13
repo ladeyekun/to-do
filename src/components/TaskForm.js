@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaPlusSquare, FaEdit } from 'react-icon/fa';
+import { FaPlusSquare, FaEdit } from 'react-icons/fa';
 
 function TaskForm({ dispatch, editingTask, setEditingTask }){
   const[taskText, setTaskText] = useState('');
@@ -16,18 +16,33 @@ function TaskForm({ dispatch, editingTask, setEditingTask }){
     event.preventDefault();
     if (!taskText.trim()) return;
 
-    const currentDate = new Date().toLocaleString();
+    const currentDate = new Date().toLocaleString('en-CA', {
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
 
     if (editingTask){
       dispatch({
         type: 'UPDATE_TASK', 
-        payload: {id: editingTask.id, text: taskText, date: currentDate}
+        payload: {
+          id: editingTask.id, 
+          text: taskText, 
+          date: currentDate
+        }
       });
       setEditingTask(null);
     } else {
       dispatch({
         type: 'ADD_TASK',
-        payload: {id: Date.now(), text: taskText, completed: false, date: currentDate}
+        payload: {
+          id: Date.now(), 
+          text: taskText, 
+          completed: false, 
+          date: currentDate
+        }
       });
     }
     setTaskText('');
@@ -38,8 +53,8 @@ function TaskForm({ dispatch, editingTask, setEditingTask }){
         <input 
           type='text'
           value={taskText}
-          onChange=''
-          placeholder=''
+          onChange={(event) => setTaskText(event.target.value)}
+          placeholder={editingTask ? 'Edit task...' : 'Add a new task...'}
           className=''
         />
         <button
