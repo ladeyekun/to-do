@@ -16,7 +16,7 @@ function TaskItem( { task, dispatch, setEditingTask } ) {
 
 
   return (
-    <div className={`task-item ${task.completed ? 'completed' : ''}`}>
+    <div className={`task-item flex ${task.completed ? 'completed' : ''}`}>
       <div className='task-item-text'>
         <p>
           {task.text}

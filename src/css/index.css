@@ -62,7 +62,7 @@ form {
     flex: 1;
     padding: 1rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: #2d2c3a;
     color: white;
     min-width: 200px;
@@ -75,7 +75,7 @@ button {
   background-color: #4f46e5;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 1rem;
   cursor: pointer;
   display: flex;
@@ -96,10 +96,9 @@ button:hover {
 
 .task-item {
   background-color: #1e1d29;
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 12px;
   box-shadow: 0 0 2px rgba(0 0 0 / 10%);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -114,7 +113,7 @@ button:hover {
 
 .task-item-text p {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 500;
   word-wrap: break-word;
   color: #ffffff;
@@ -129,7 +128,8 @@ button:hover {
 }
 
 .task-item-date p {
-  font-size: 1.3rem;
+  font-size: 16px;
+  font-weight: 400;
   color: #aaa;
   margin: 0;
 }
@@ -165,8 +165,8 @@ button:hover {
 .no-tasks {
   text-align: center;
   color: #aaa;
-  font-size: 1.1rem;
-  padding: 2rem;
+  font-size: 16px;
+  padding: 15px;
 }
 
 /*************************/
