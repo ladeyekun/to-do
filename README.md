@@ -2,7 +2,7 @@
 
 A sleek and responsive to-do list application built with **React**, offering task creation, editing, completion toggling, and deletion — all persisted in local storage.
 
-![Screenshot](https://ladeyekun.github.io/to-do/images/todo.png) 
+![Screenshot](./public/images/todo.png) 
 
 ## ✨ Features
 
