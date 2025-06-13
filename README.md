@@ -2,7 +2,7 @@
 
 A sleek and responsive to-do list application built with **React**, offering task creation, editing, completion toggling, and deletion — all persisted in local storage.
 
-![Screenshot](./screenshot.png) <!-- Replace with an actual screenshot if you have one -->
+![Screenshot](./images/todo.png) 
 
 ## ✨ Features
 
@@ -29,8 +29,8 @@ A sleek and responsive to-do list application built with **React**, offering tas
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/react-todo-app.git
-   cd react-todo-app
+   git clone https://github.com/ladeyekun/to-do.git
+   cd to-do
 
 
 2. **In the project directory, you can run**:
