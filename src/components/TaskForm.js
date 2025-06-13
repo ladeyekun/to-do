@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaPlusSquare, FaEdit } from 'react-icons/fa';
 
 function TaskForm({ dispatch, editingTask, setEditingTask }){
   const[taskText, setTaskText] = useState('');
+  const textbox = useRef(null);
 
   useEffect(() => {
     if (editingTask){
       setTaskText(editingTask.text);
+      textbox.current?.focus();
     } else{
       setTaskText('');
     }
@@ -52,6 +54,7 @@ function TaskForm({ dispatch, editingTask, setEditingTask }){
       <form onSubmit={handleFormSubmit}>
         <input 
           type='text'
+          ref={textbox}
           value={taskText}
           onChange={(event) => setTaskText(event.target.value)}
           placeholder={editingTask ? 'Edit task...' : 'Add a new task...'}

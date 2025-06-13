@@ -1,4 +1,4 @@
-import { FaTrash, FaEdit, FaCheckSquare } from 'react-icons/fa';
+import { FaTrashAlt, FaEdit, FaCheckSquare } from 'react-icons/fa';
 
 function TaskItem( { task, dispatch, setEditingTask } ) {
 
@@ -28,17 +28,17 @@ function TaskItem( { task, dispatch, setEditingTask } ) {
         </div>
         <div className='task-item-icons flex'>
           <FaCheckSquare 
-            class='task-item-icon'
+            className={`task-item-icon complete ${task.completed ? 'completed' : ''}`}
             onClick={handleToggleComplete}
             title={task.completed ? 'Mark as incomplete' : 'Mark as complete'}
           />
           <FaEdit 
-            class='task-item-icon'
+            className='task-item-icon edit'
             onClick={handleEdit}
             title='Edit task'
           />
-          <FaTrash 
-            class='task-item-icon'
+          <FaTrashAlt 
+            className='task-item-icon delete'
             onClick={handleDelete}
             title='Delete task'
           />
